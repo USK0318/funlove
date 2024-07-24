@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const dotenv = require("dotenv").config();
 
-const port1 = 6001;
+const port1 = 8001;
 
 app.use(cors({
     origin: '*',
@@ -28,7 +28,7 @@ connection.connect((err) => {
         console.error('Error connecting to database:', err);
         return;
     }
-    console.log('Connected to the database');
+    console.log('Connected to the database....  (-;');
 });
 
 
