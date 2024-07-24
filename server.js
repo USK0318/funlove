@@ -111,7 +111,7 @@ app.post('/send', authenticateToken, (req, res) => {
 
   
 
-app.get('/receive',authenticateToken, (req, res) => {
+app.get('/receive', (req, res) => {
     connection.query('SELECT * FROM Ecomers.massage;', (err, results) => {
         if (err) {
             console.error('Error executing query:', err);
