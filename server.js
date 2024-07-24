@@ -6,20 +6,19 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const dotenv = require("dotenv").config();
 
+const port1 = 6001;
+
 app.use(cors({
     origin: '*',
     credentials: true
   }));
-  
-
-
 
 const connection = mysql.createConnection({
     host: process.env.host,
     user: process.env.user,
     password: process.env.password,
     database: process.env.database,
-    port: process.env.port
+    port: process.env.databaseport
 });
 
 app.use(express.json());
@@ -165,6 +164,6 @@ wss.on('connection', (ws) => {
 });
 
 
-app.listen(8000, () => {
-    console.log('Server is running on port 8000....');
+app.listen(port1, () => {
+    console.log(`Server started on port ${port1}`);
 });
