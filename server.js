@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const dotenv = require("dotenv").config();
 
-const port1 = 8001;
+const port1 = process.env.server_port;
 
 app.use(cors({
     origin: '*',
